@@ -1,0 +1,6 @@
+{
+  "DaysCount": "2222",
+  "Curse": "1.9",
+  "DatabaseName": "file string",
+  "Timeout": "10675199.02:48:05.4775807"
+}
