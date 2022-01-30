@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OddEven", "OddEven\OddEven.csproj", "{D2C6CE1E-9180-42D0-BEA0-09285C101464}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OddEvenTests", "OddEvenTests\OddEvenTests.csproj", "{45C2B7A6-B29F-4575-AA28-F28439FFCA00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcStats", "CalcStats\CalcStats.csproj", "{F893417F-4616-4761-829B-288CD71843C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcStatsTests", "CalcStatsTests\CalcStatsTests.csproj", "{B5076931-FBBD-49D0-A3D0-755EF88EF21A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarryPotter", "HarryPotter\HarryPotter.csproj", "{A01FA3ED-A5A9-4302-AA06-CCFAD1AA7FE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarryPotterTests", "HarryPotterTests\HarryPotterTests.csproj", "{E2972723-63DF-49F2-99E8-98433F66370C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2C6CE1E-9180-42D0-BEA0-09285C101464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2C6CE1E-9180-42D0-BEA0-09285C101464}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2C6CE1E-9180-42D0-BEA0-09285C101464}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2C6CE1E-9180-42D0-BEA0-09285C101464}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45C2B7A6-B29F-4575-AA28-F28439FFCA00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45C2B7A6-B29F-4575-AA28-F28439FFCA00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45C2B7A6-B29F-4575-AA28-F28439FFCA00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45C2B7A6-B29F-4575-AA28-F28439FFCA00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F893417F-4616-4761-829B-288CD71843C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F893417F-4616-4761-829B-288CD71843C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F893417F-4616-4761-829B-288CD71843C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F893417F-4616-4761-829B-288CD71843C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5076931-FBBD-49D0-A3D0-755EF88EF21A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5076931-FBBD-49D0-A3D0-755EF88EF21A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5076931-FBBD-49D0-A3D0-755EF88EF21A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5076931-FBBD-49D0-A3D0-755EF88EF21A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A01FA3ED-A5A9-4302-AA06-CCFAD1AA7FE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A01FA3ED-A5A9-4302-AA06-CCFAD1AA7FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A01FA3ED-A5A9-4302-AA06-CCFAD1AA7FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A01FA3ED-A5A9-4302-AA06-CCFAD1AA7FE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2972723-63DF-49F2-99E8-98433F66370C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2972723-63DF-49F2-99E8-98433F66370C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2972723-63DF-49F2-99E8-98433F66370C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2972723-63DF-49F2-99E8-98433F66370C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5B5AB09-AF14-40EC-A512-AD445C7A8BCC}
+	EndGlobalSection
+EndGlobal
