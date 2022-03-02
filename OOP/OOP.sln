@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP", "OOP\OOP.csproj", "{6273C761-F4FB-40CC-8DF4-F4C8E35AC85A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentWorker", "DocumentWorker\DocumentWorker.csproj", "{67719140-01B6-4415-88F9-5E44B6067EB5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6273C761-F4FB-40CC-8DF4-F4C8E35AC85A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6273C761-F4FB-40CC-8DF4-F4C8E35AC85A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6273C761-F4FB-40CC-8DF4-F4C8E35AC85A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6273C761-F4FB-40CC-8DF4-F4C8E35AC85A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67719140-01B6-4415-88F9-5E44B6067EB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67719140-01B6-4415-88F9-5E44B6067EB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67719140-01B6-4415-88F9-5E44B6067EB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67719140-01B6-4415-88F9-5E44B6067EB5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {93B731DE-18B1-4938-9F15-16DE7D595C51}
+	EndGlobalSection
+EndGlobal
