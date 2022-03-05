@@ -85,23 +85,22 @@ namespace Task1
             //                    select uis),
 
             //    });
-            var b = from product in products
-                group product by product.Category
-                into grp
-                select new
+            
+            return products
+                .GroupBy(product => product.Category)
+                .Select(categoryGroup => new Linq7CategoryGroup
                 {
-                    Category = grp.Key,
-                    UnitsInStock = from gr in grp 
-                        group gr by new {gr.UnitsInStock, gr.UnitPrice} into g
-                        orderby g.Key.UnitPrice
-                            select new
-                            {
-                                g.Key.UnitsInStock,
-                                Price = g.Key.UnitPrice
-                            }
-                };
-
-            return b;
+                    Category = categoryGroup.Key,
+                    UnitsInStockGroup = categoryGroup
+                        .GroupBy(product => product.UnitsInStock)
+                        .Select(unitsInStockGroup => new Linq7UnitsInStockGroup
+                        {
+                            UnitsInStock = unitsInStockGroup.Key,
+                            Prices = unitsInStockGroup
+                                .Select(product => product.UnitPrice)
+                                .OrderBy(price => price)
+                        })
+                });
         }
 
         public static IEnumerable<(decimal category, IEnumerable<Product> products)> Linq8(
@@ -111,19 +110,41 @@ namespace Task1
             decimal expensive
         )
         {
-            throw new NotImplementedException();
+            return products.Select(product =>
+            {
+                if (product.UnitPrice > 0 && product.UnitPrice <= cheap)
+                {
+                    return (cheap, product);
+                }
+                if (product.UnitPrice > cheap && product.UnitPrice <= middle)
+                {
+                    return (middle, product);
+                }
+                return (expensive, product);
+            })
+                .GroupBy(group => group.Item1)
+                .Select(group => (group.Key, group.Select(x => x.product)));
         }
 
         public static IEnumerable<(string city, int averageIncome, int averageIntensity)> Linq9(
             IEnumerable<Customer> customers
         )
         {
-            throw new NotImplementedException();
+            return customers
+                .GroupBy(customer => customer.City)
+                .Select(group => (group.Key,
+                    Convert.ToInt32(group.Average(customer => customer.Orders.Sum(order => order.Total))),
+                    Convert.ToInt32(group.Average(customer => customer.Orders.Count()))));
         }
 
         public static string Linq10(IEnumerable<Supplier> suppliers)
         {
-            throw new NotImplementedException();
+            return string
+               .Join("", suppliers
+               .Select(supplier => supplier.Country)
+               .Distinct()
+               .OrderBy(country => country.Length)
+               .ThenBy(country => country));
         }
     }
 }
