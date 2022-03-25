@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Categories page";
+}
+@model IEnumerable<MVCPrinciples.DB.Models.Category>
+
+<body>
+    <table>
+        <thead>
+        <tr>
+            <th style="padding-right: 15px">CategoryId</th>
+            <th style="padding-right: 15px">CategoryId</th>
+            <th style="padding-right: 15px">Description</th>
+        </tr>
+        </thead>
+        <tbody>
+            @foreach (var category in Model)
+            {
+            <tr>
+                <td>@category.CategoryId</td>
+                <td>@category.CategoryName</td>
+                <td>@category.Description</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</body>

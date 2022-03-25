@@ -101,7 +101,7 @@ namespace HTTPListenerSolution
             HttpListenerResponse response = context.Response;
 
             string responseString = "asd";
-            response.StatusCode = (int)HttpStatusCode.Continue;
+            response.StatusCode = 101;
             byte[] buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
 
             response.ContentLength64 = buffer.Length;

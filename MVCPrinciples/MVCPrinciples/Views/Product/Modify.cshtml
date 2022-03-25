@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "View";
+}
+@model ProductViewModel
+
+<h2>Modify</h2>
+
+<div class="panel-success">
+    <div class="panel-body">
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary()
+            <div class="form-group">
+                <label>Имя продукта</label>
+                <h4>Прежнее имя : @Model.ProductName</h4>
+                @Html.TextBoxFor(x => x.ProductName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.ProductName, "",new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>Количество на единицу</label>
+                <h4>Прежнее количество на единицу : @Model.QuantityPerUnit</h4>
+                @Html.TextBoxFor(x => x.QuantityPerUnit, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.QuantityPerUnit, "", new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>Цена</label>
+                <h4>Прежняя цена : @Model.UnitPrice</h4>
+                @Html.TextBoxFor(model => model.UnitPrice, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(x => x.UnitPrice, "", new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>На складе</label>
+                <h4>Прежнее кол-во на складе: @Model.UnitsInStock</h4>
+                @Html.TextBoxFor(x => x.UnitsInStock, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.UnitsInStock, "", new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>В заказе</label>
+                <h4>Прежнее кол-во в заказе : @Model.UnitsOnOrder</h4>
+                @Html.TextBoxFor(x => x.UnitsOnOrder, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.UnitsOnOrder, "", new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>Уровень переупорядочивания</label>
+                <h4>Прежний уровень : @Model.ReorderLevel</h4>
+                @Html.EditorFor(model => model.ReorderLevel, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(x => x.ReorderLevel, "", new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>Снято с производства</label>
+                <h4>Прежнее состояние : @Model.Discontinued</h4>
+                @Html.EditorFor(model => model.Discontinued, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(x => x.Discontinued, "", new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>Поставщик</label>
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.SupplierId, Model.SupplierList, "Select Supplier", new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(x => x.SupplierId, "", new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Категория</label>
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.CategoryId, Model.CategoryList, "Select Category", new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(x => x.CategoryId, "", new { @class = "form-control" })
+                </div>
+            </div>
+            <div hidden>
+                @Html.EditorFor(model => model.ProductId, new {htmlAttributes = new {@class = "form-control"}})
+            </div>
+            <div class="text-center">
+                <input type="submit" value="Сохранить" class="btn btn-success" />
+            </div>
+        }
+    </div>
+</div>

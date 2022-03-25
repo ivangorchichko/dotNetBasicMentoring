@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Categories page";
+}
+@model ProductViewModel
+
+<body>
+<table>
+    <thead>
+        <tr>
+            <th style="padding-right: 15px">ProductId</th>
+            <th style="padding-right: 15px">SupplierName</th>
+            <th style="padding-right: 15px">CategoryId</th>
+            <th style="padding-right: 15px">ProductName</th>
+            <th style="padding-right: 15px">QuantityPerUnit</th>
+            <th style="padding-right: 15px">UnitPrice</th>
+            <th style="padding-right: 15px">UnitsInStock</th>
+            <th style="padding-right: 15px">UnitsOnOrder</th>
+            <th style="padding-right: 15px">ReorderLevel</th>
+            <th style="padding-right: 15px">Discontinued</th>
+            <th style="padding-right: 15px">Modify</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.ShowProductsNumber == 0)
+        {
+            <tr>
+                @Html.ActionLink("Create", "Create")
+            </tr>
+            @foreach (var category in Model.Product)
+            {
+                <tr>
+                    <td>@category.ProductId</td>
+                    <td>@category.Supplier.CompanyName</td>
+                    <td>@category.Category.CategoryName</td>
+                    <td>@category.ProductName</td>
+                    <td>@category.QuantityPerUnit</td>
+                    <td>@category.UnitPrice</td>
+                    <td>@category.UnitsInStock</td>
+                    <td>@category.UnitsOnOrder</td>
+                    <td>@category.ReorderLevel</td>
+                    <td>@category.Discontinued</td>
+                    <td>@Html.ActionLink("Modify", "Modify", new { id = category.ProductId }, null)</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                @Html.ActionLink("Create", "Create")
+            </tr>
+            var products = Model.Product.ToList();
+            @for (var i = 0; i < Model.ShowProductsNumber; i++)
+            {
+
+                <tr>
+                    <td>@products[i].ProductId</td>
+                    <td>@products[i].Supplier.CompanyName</td>
+                    <td>@products[i].Category.CategoryName</td>
+                    <td>@products[i].ProductName</td>
+                    <td>@products[i].QuantityPerUnit</td>
+                    <td>@products[i].UnitPrice</td>
+                    <td>@products[i].UnitsInStock</td>
+                    <td>@products[i].UnitsOnOrder</td>
+                    <td>@products[i].ReorderLevel</td>
+                    <td>@products[i].Discontinued</td>
+                    <td>@Html.ActionLink("Modify", "Modify", new { id = products[i].ProductId }, null)</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+</body>
